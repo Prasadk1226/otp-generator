@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    "
+  >
+    <h1 id="otp">000000</h1>
+    <button id="clicker" type="button">GET OTP</button>
+  </body>
+  <script>
+    let text = document.getElementById("otp");
+    let clicker = document.getElementById("clicker");
+
+    clicker.addEventListener("click", function () {
+      let z = Math.floor(Math.random() * 500000) + 99999;
+      text.textContent = z;
+      console.log(z);
+    });
+  </script>
+</html>
