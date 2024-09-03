@@ -23,7 +23,7 @@
         font-weight: bolder;
     }
     #otp{
-        color: white;
+        /* color: white; */
         text-shadow: 0px 0px 5px rgb(255, 202, 202);
     }
   </style>
@@ -32,17 +32,21 @@
     <button id="clicker" type="button">GET OTP</button>
   </body>
   <script>
-    let text = document.getElementById("otp");
+    let otp = document.getElementById("otp");
     let clicker = document.getElementById("clicker");
     let bg = document.getElementById("bg")
 
     clicker.addEventListener("click", function () {
       let z = Math.floor(Math.random() * 500000) + 99999;
-      text.textContent = z;
-      console.log(z);
+      otp.innerHTML = z;
+      // console.log(z);
     });
-    clicker.addEventListener('click',function(){
-       let y = bg.style.backgroundColor="rgb(6,19,6)"
+    clicker.addEventListener('mouseover',function(){
+      //  let y = bg.style.backgroundColor="rgb(6,19,6)"
+      let y = "#" 
+      y = y + (Math.floor(Math.random() * 500000) + 99999);
+      bg.style.backgroundColor = y;
+      console.log(y);
     //    console.log(y)
     //    return y
     }
